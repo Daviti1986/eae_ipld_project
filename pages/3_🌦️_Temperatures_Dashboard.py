@@ -138,9 +138,9 @@ if unique_countries_list is not None and len(selected_cities) > 0:
         city_df = df.loc[df["City"] == city]             # TODO
         #city_df_period = None     # TODO
         plt.plot(city_df['Date'], city_df['AvgTemperatureCelsius'], label=city, )                # TODO 
-    plt.title("Temperature")   # TODO
-    plt.xlabel("Period")  # TODO
-    plt.ylabel("Timestamp")  # TODO
+    plt.title("Temperature", fontsize = 24, color = "blue", fontname = "Brush Script MT")   # TODO
+    plt.xlabel("Period", fontsize = 18, color = "blue", fontname = "Brush Script MT")  # TODO
+    plt.ylabel("Timestamp", fontsize = 18, color = "blue", fontname = "Brush Script MT")  # TODO
 
     plt.legend()
     
@@ -158,9 +158,9 @@ if unique_countries_list is not None and len(selected_cities) > 0:
     #     city_df_period = None     # TODO
         plt.hist(city_df['AvgTemperatureCelsius'], bins = 20, label=city)                # TODO
 
-    plt.title("Temperature")   # TODO
-    plt.xlabel("Period")  # TODO
-    plt.ylabel("Timestamp")  # TODO
+    plt.title("Temperature", fontsize = 24, color = "blue", fontname = "Brush Script MT")   # TODO
+    plt.xlabel("Period", fontsize = 18, color = "blue", fontname = "Brush Script MT")  # TODO
+    plt.ylabel("Timestamp", fontsize = 18, color = "blue", fontname = "Brush Script MT")  # TODO
 
     plt.legend()
 

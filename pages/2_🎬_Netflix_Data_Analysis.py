@@ -87,9 +87,9 @@ year = cols2[0].number_input("Select a year:", min_year, max_year, 2005)
 
 # TODO: Ex 2.6: For a given year, get the Pandas Series of how many movies and series 
 # combined were made by every country, limit it to the top 10 countries.
-david = movies_df[movies_df["release_year"] == year]
-dato = david.value_counts("country")
-top_10_countries = dato.head(10)
+movie_by_year = movies_df[movies_df["release_year"] == year]
+by_year = movie_by_year.value_counts("country")
+top_10_countries = by_year.head(10)
 
 # print(top_10_countries)
 if top_10_countries is not None:
@@ -119,9 +119,11 @@ movies_avg_duration_per_year = df_of_movies.groupby("release_year")["Duration_of
 if movies_avg_duration_per_year is not None:
     fig = plt.figure(figsize=(9, 6))
 
-    plt.plot(movies_avg_duration_per_year) # TODO: generate the line plot using plt.plot() and the information from movies_avg_duration_per_year (the vertical axes with the minutes value) and its index (the horizontal axes with the years)
+    plt.plot(movies_avg_duration_per_year, linewidth = '5', color = "blue") # TODO: generate the line plot using plt.plot() and the information from movies_avg_duration_per_year (the vertical axes with the minutes value) and its index (the horizontal axes with the years)
 
-    plt.title("Average Duration of Movies Across Years")
+    plt.title("Average Duration of Movies Across Years", fontsize = 24, color = "blue", fontname="Brush Script MT")
+    plt.xlabel('Year', fontsize=18, color = "blue", fontname="Brush Script MT")
+    plt.ylabel('Average', fontsize=18, color = "blue", fontname="Brush Script MT")
 
     st.pyplot(fig)
 
